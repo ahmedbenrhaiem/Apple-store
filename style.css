@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container{
+    background: #000;
+    min-height: 100vh; /*means that the container will ake the whole size of the screen*/
+    width: 100%;
+    overflow: hidden;
+    position: relative; /*works together with absolute position below in the .icons*/
+}
+header{
+    display: flex; /*the first two propoerties makes the logo on the left and the nav menu on the right*/
+    justify-content: space-between;
+    align-items: center; /*makes all the header in the same line*/
+    width: 80%;
+    margin: auto;
+    padding: 20px 5px 0;
+    
+}
+.logo{
+    width: 40px;
+}
+ul li{
+    display: inline-block; /*this is second method for how to make the elements of nav bar appears horizontally*/
+    list-style: none; /*allows to remove the dark dots, but in our case the inline-block above is enough*/
+}
+ul li a{
+    color: #fff;
+    text-decoration: none; /*allows to remove the line below the word*/
+    margin: 0 10px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+   
+    
+}
+.content .text{
+    width: 40%;
+    color: #fff;
+}
+.content .text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.content .text p{
+    font-size: 18px;
+    margin: 20px 0;
+}
+.content .text a{
+    text-decoration: none;
+    background: #fff;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+.content .image{
+    width: 30%;
+    transform: scale(0.7); /*reduce image size*/
+}
+.icons{
+    position: absolute; /*means this class will move in his parent box (container)*/
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50px); /*puts the icons in the center*/
+}
+.icons img{
+    width: 40px;
+    transition: 0.5s; /*makes the hover transition smoother*/
+    cursor: pointer;
+    padding-bottom: 20px;
+
+}
+.icons img:hover{
+    transform: scale(1.2); /*icon will be bigger during hover*/
+}
